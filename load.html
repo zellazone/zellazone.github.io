@@ -1,5 +1,6 @@
 <html>
 <head>
+<script src="//jquery.com/jquery-wp-content/themes/jquery/js/modernizr.custom.2.8.3.min.js"></script>
 </head>
 <body>
     
@@ -32,6 +33,7 @@ var request = new Request();
 
 document.write("<img src=\"" + request.getParameter("src") + "\" style=\"width: 100%; height: auto;\">");
 
+$("head").append("<meta property=\"og:image\" content=\"" + request.getParameter("src") + "\" />");
 
 </script>
 </html>
